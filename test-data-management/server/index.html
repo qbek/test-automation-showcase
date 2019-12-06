@@ -7,11 +7,6 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
-
-
-
-
-
 	  <div class="container">
       <div class="row">
         <div class="col-8">
@@ -25,15 +20,15 @@
         <form id="form">
           <div class="form-group">
             <label for="exampleInputEmail1">Username</label>
-            <input name="login" type="input" class="form-control" id="login" aria-describedby="emailHelp">
+            <input name="login" type="input" class="form-control" id="login" aria-describedby="emailHelp" testId="login">
             <small class="form-text text-muted">Who you are?</small>
           </div>
           <div class="form-group">
             <label for="exampleInputPassword1">Password</label>
-            <input name="password" type="input" class="form-control" id="password">
+            <input name="password" type="input" class="form-control" id="password" testId="password">
             <small class="form-text text-muted">Are you sure?</small>
           </div>
-          <button type="submit" class="btn btn-success">Sign in</button>
+          <button type="submit" class="btn btn-success" testId="singInButton">Sign in</button>
         </form>
       </div>
       <div class="col"></div>
