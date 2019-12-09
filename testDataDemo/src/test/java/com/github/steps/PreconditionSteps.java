@@ -17,7 +17,6 @@ public class PreconditionSteps {
     @Step
     public User thereIsAUserInSystem(String login, String password) {
         client.reset();
-
         User myUser = new User();
         String body = String.format("%s:%s", myUser.getLogin(), myUser.getPassword());
         client
