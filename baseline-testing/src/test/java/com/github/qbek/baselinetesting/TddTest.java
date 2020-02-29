@@ -22,16 +22,10 @@ public class TddTest {
                 .log().all()
                 .when().get("/user");
         resp.then().log().all();
-
-        UserDetails details = resp.as(UserDetails.class);
-//
-//        String returnBody = resp.getBody().asString();
-//        JSONObject json = new JSONObject(returnBody);
-//        assertTrue("User should have name", json.getString("name").equals("Jakub"));
-//        assertTrue("User sholud have nickname", json.getString("nickname").equals("Kuba"));
-
-        assertEquals(details.getName(), "Jakub");
-        assertEquals(details.getNickname(), "Kuba");
+        String returnBody = resp.getBody().asString();
+        JSONObject json = new JSONObject(returnBody);
+        assertTrue("User should have name", json.getString("name").equals("Jakub"));
+        assertTrue("User sholud have nickname", json.getString("nickname").equals("Kuba"));
     }
 
     @Test
@@ -49,7 +43,7 @@ public class TddTest {
         assertTrue("User should have name", json.getString("name").equals("Jakub"));
         assertTrue("User sholud have nickname", json.getString("nickname").equals("Kuba"));
         assertTrue("User sholud have surename", json.getString("surename").equals("Szewczyk"));
-        assertTrue("User sholud have PESEL", json.getString("PESEL").equals("473823475"));
+        assertTrue("User sholud have PESEL", json.getString("PESEL").equals("1223412341"));
     }
 
 }

@@ -42,8 +42,7 @@ public class BaselineTest {
         save_response_to_file("user_sercret_details");
     }
 
-
-        private void save_response_to_file(String filename) throws Exception {
+    private void save_response_to_file(String filename) throws Exception {
         String file = String.format("target/%s.json", filename);
         JSONObject json = new JSONObject(response.asString());
         FileUtils.writeStringToFile(new File(file), json.toString(4), forName("UTF-8"));
